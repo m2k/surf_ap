@@ -27,6 +27,16 @@ actions
 end
 
 
+  form do |f|
+    f.inputs "Admin Details" do
+      f.input :facebook_id
+      f.input :site_name
+      f.input :site_photo
+      f.input :site_url
+    end
+    f.actions
+  end
+
 permit_params :facebook_id,:site_name,:site_photo,:site_url,:aliev_flg
 
 end

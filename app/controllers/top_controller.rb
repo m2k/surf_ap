@@ -16,7 +16,7 @@ def insert
 		datas = site.getFbTimeLine(access_token,list['facebook_id'])
 		datas.each do |data|
 			SiteLogs.find_or_create_by(facebook_id: data['id']) do |log|
-				log.site_list_id = lists[lists.each_with_index]['id']
+				log.site_list_id = list['id']
 				log.facebook_id = data['id']
 				log.photo = data['picture']
 				log.text = data['message']
@@ -30,9 +30,8 @@ def insert
 end
 
 def list
-
 	log = SiteLogs.new
-	logs = log.getLog.to_json
+	logs = log.getLog( params[:page], params[:limit]).to_json
 	render :json => logs	
 end
 

@@ -42,3 +42,4 @@ gem 'spring',        group: :development
 gem "koala", "~> 1.10.0rc"
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
+gem 'therubyracer'

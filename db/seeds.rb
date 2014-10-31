@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-SiteLists.create(:fb_id => 'nakisurf' :site_name => 'ナキサーフ', :site_photo => '', :site_url => 'https://www.facebook.com/nakisurf')
+SiteLists.create(:facebook_id => 'nakisurf' ,:site_name => 'ナキサーフ', :site_photo => '', :site_url => 'https://www.facebook.com/nakisurf')

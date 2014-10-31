@@ -20,7 +20,7 @@ def self.insert
 		datas = site.getFbTimeLine(access_token,list['facebook_id'])
 		datas.each do |data|
 			SiteLogs.find_or_create_by(facebook_id: data['id']) do |log|
-				log.site_list_id = lists[lists.each_with_index]['id']
+				log.site_list_id = list['id']
 				log.facebook_id = data['id']
 				log.photo = data['picture']
 				log.text = data['message']
@@ -35,7 +35,7 @@ end
 
   private
 
-def getFbUrl
+def self.getFbUrl
 	return 'http://facebook.com/'
 end
 
